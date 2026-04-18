@@ -30,10 +30,10 @@
 
         nav_num {
             bindings = <
-            &kp NUMBER_1  &kp NUMBER_2    &kp NUMBER_3       &kp NUMBER_4     &kp NUMBER_5    &kp NUMBER_6      &kp N7             &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0
-            &kp TAB       &msc SCRL_LEFT  &kp K_SCROLL_UP    &msc SCRL_RIGHT  &none           &kp GRAVE         &kp LEFT           &kp UP        &kp RIGHT     &kp EQUAL
-&kp ESCAPE  &kp TILDE     &none           &kp K_SCROLL_DOWN  &none            &none           &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp DOWN      &kp MINUS     &kp BACKSLASH  &trans
-                                          &trans             &trans           &trans          &trans            &trans             &kp DELETE
+            &kp NUMBER_1  &kp NUMBER_2    &kp NUMBER_3    &kp NUMBER_4      &kp NUMBER_5    &kp NUMBER_6      &kp N7             &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0
+            &kp TAB       &msc SCRL_LEFT  &msc SCRL_UP    &msc SCRL_RIGHT   &kp GRAVE       &kp SQT           &kp LEFT           &kp UP        &kp RIGHT     &kp EQUAL
+&kp ESCAPE  &kp TILDE     &none           &msc SCRL_DOWN  &kp LEFT_COMMAND  &none           &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp DOWN      &kp MINUS     &kp BACKSLASH  &trans
+                                          &trans          &trans            &trans          &trans            &trans             &kp DELETE
             >;
         };
 
