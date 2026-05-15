@@ -8,7 +8,9 @@
 //                                                             ▀▀▀▀▀    █  █  █      ▀
 //                                                                      ▀  ▀  ▀
 //
-// ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+// ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+// Miryoku Layout with QWERTY
+// ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
@@ -19,39 +21,63 @@
     keymap {
         compatible = "zmk,keymap";
 
+        // Miryoku base layer - QWERTY
         base {
             bindings = <
-                    &kp Q  &kp W  &kp E             &kp R             &kp T        &kp Y      &kp U            &kp I         &kp O    &kp P
-                    &kp A  &kp S  &kp D             &kp F             &kp G        &kp H      &kp J            &kp K         &kp L    &kp SEMI
-&mt LEFT_SHIFT TAB  &kp Z  &kp X  &kp C             &kp V             &kp B        &kp N      &kp M            &kp COMMA     &kp DOT  &kp FSLH  &mt RIGHT_SHIFT SQT
-                                  &kp LEFT_CONTROL  &kp LEFT_COMMAND  &kp SPACE    &kp ENTER  &lt 1 BACKSPACE  &lt 2 DELETE
+                    &kp Q      &kp W      &kp E      &kp R      &kp T              &kp Y      &kp U      &kp I      &kp O      &kp P
+                    &kp A      &kp S      &kp D      &kp F      &kp G              &kp H      &kp J      &kp K      &kp L      &kp SEMI
+&mt LEFT_SHIFT TAB  &kp Z      &kp X      &kp C      &kp V      &kp B              &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH  &mt RIGHT_SHIFT SQT
+                                         &lt 4 ESC  &lt 2 SPC  &lt 1 ENTER        &lt 3 BSPC &lt 5 DEL  &none
             >;
         };
 
-        nav_num {
+        // Numbers and symbols on left
+        nav {
             bindings = <
-        &kp NUMBER_1  &kp NUMBER_2     &kp NUMBER_3    &kp NUMBER_4    &kp NUMBER_5    &kp NUMBER_6      &kp N7             &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0
-        &kp ESCAPE    &msc SCRL_RIGHT  &msc SCRL_DOWN  &msc SCRL_LEFT  &kp GRAVE       &kp SQT           &kp LEFT           &kp UP        &kp RIGHT     &kp EQUAL
-&trans  &kp TILDE     &kp PAGE_DOWN    &msc SCRL_UP    &kp PAGE_UP     &none           &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp DOWN      &kp MINUS     &kp BACKSLASH  &trans
-                                       &trans          &trans          &trans          &trans            &none              &trans
+        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5    &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0
+        &kp TAB       &kp GRAVE     &kp LEFT      &kp DOWN      &kp UP          &kp RIGHT     &kp SQT       &kp MINUS     &kp EQUAL     &kp BACKSLASH
+&trans  &kp LS(GRAVE) &kp LBKT      &kp RBKT      &none         &none           &none         &kp COMMA     &kp DOT       &kp FSLH      &none         &trans
+                                    &trans        &none         &trans          &trans        &trans        &trans
             >;
         };
 
-        sym_func {
+        // Symbols on right
+        sym {
             bindings = <
-            &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp LC(UP)    &kp C_AC_SEARCH   &kp LS(LG(NUMBER_4))    &kp LG(L)  &kp C_PREV         &kp C_PLAY_PAUSE   &kp C_NEXT         &kp LC(LG(Q))
-            &kp TAB               &none                 &none         &none             &none                   &none      &kp C_MUTE         &kp C_VOLUME_DOWN  &kp C_VOL_UP       &none
-&kp ESCAPE  &kp LEFT_SHIFT        &kp LEFT_CONTROL      &kp LEFT_ALT  &kp LEFT_COMMAND  &none                   &none      &kp RIGHT_COMMAND  &kp RIGHT_ALT      &kp RIGHT_CONTROL  &kp RIGHT_SHIFT  &trans
-                                                        &trans        &trans            &trans                  &trans     &trans             &none
+        &kp EXCL  &kp AT    &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET &kp AMPS  &kp STAR  &kp LPAR  &kp RPAR
+        &none     &none     &none     &none     &none        &kp LBRC  &kp RBRC  &kp LBKT  &kp RBKT  &kp PLUS
+&none   &none     &none     &none     &none     &none        &kp PIPE  &none     &none     &none     &none     &none
+                                      &trans    &trans       &trans    &none     &trans    &trans
             >;
         };
 
-        device {
+        // Function keys and media controls
+        func {
             bindings = <
-       &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp F1   &kp F2   &kp F3  &kp F4  &kp F5
-       &none         &none         &none         &none         &none           &kp F6   &kp F7   &kp F8  &kp F9  &kp F10
-&none  &none         &none         &none         &none         &bt BT_CLR      &kp F11  &kp F12  &none   &none   &none    &none
-                                   &none         &none         &none           &none    &none    &none
+        &kp F1  &kp F2  &kp F3  &kp F4  &kp F5      &kp F6  &kp F7  &kp F8  &kp F9  &kp F10
+        &none   &none   &none   &none   &none       &none   &none   &none   &none   &kp F11
+&none   &none   &none   &none   &none   &none       &none   &none   &none   &none   &none   &kp F12
+                                &trans  &trans      &trans  &trans  &trans  &none
+            >;
+        };
+
+        // Media and mouse controls
+        media {
+            bindings = <
+        &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp LC(UP)      &kp C_AC_SEARCH    &kp LS(LG(NUMBER_4))  &kp LG(L)  &kp C_PREV  &kp C_PLAY_PAUSE  &kp C_NEXT  &kp LC(LG(Q))
+        &kp TAB               &none                 &none           &none              &none                 &none      &kp C_MUTE &kp C_VOLUME_DOWN &kp C_VOL_UP &none
+&none   &kp LEFT_SHIFT        &kp LEFT_CONTROL      &kp LEFT_ALT    &kp LEFT_COMMAND   &none                 &none      &none      &none             &none       &none         &none
+                                                    &none           &none              &none                 &none      &none      &none
+            >;
+        };
+
+        // Bluetooth and system controls
+        system {
+            bindings = <
+        &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp PSCRN  &kp SLCK  &kp PAUSE_BREAK  &none  &none
+        &none         &none         &none         &none         &none           &none      &none     &none            &none  &none
+&none   &none         &none         &none         &none         &bt BT_CLR      &none      &none     &none            &none  &none  &none
+                                    &none         &none         &none           &none      &none     &none
             >;
         };
     };
@@ -59,9 +85,10 @@
     conditional_layers {
         compatible = "zmk,conditional-layers";
 
-        device {
-            if-layers = <1 2>;
-            then-layer = <3>;
+        // Activate system layer when both nav and func layers are active
+        system {
+            if-layers = <2 3>;
+            then-layer = <5>;
         };
     };
 };
