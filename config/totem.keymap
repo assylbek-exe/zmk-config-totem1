@@ -60,16 +60,16 @@
 
         num_sym {
             bindings = <
-        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5    &kp NUMBER_6      &kp N7             &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0
-        &trans        &trans        &trans        &trans        &trans          &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp EQUAL     &kp MINUS     &none
-&trans  &trans        &trans        &trans        &trans        &trans          &trans            &trans             &trans        &trans        &kp BACKSLASH  &trans
+        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5    &kp NUMBER_6      &kp N7             &kp NUMBER_8   &kp NUMBER_9      &kp NUMBER_0
+        &trans        &trans        &trans        &trans        &trans          &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp EQUAL      &kp MINUS         &kp PIPE
+&trans  &trans        &trans        &trans        &trans        &trans          &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp LESS_THAN  &kp GREATER_THAN  &kp BACKSLASH  &trans
                                     &trans        &kp DELETE    &trans          &trans            &none              &trans
             >;
         };
 
         nav_rus {
             bindings = <
-        &trans  &trans  &trans  &trans  &kp PERCENT    &trans  &trans    &trans    &trans      &kp LBKT
+        &trans  &trans  &trans  &trans  &kp PERCENT    &trans  &kp HOME  &trans    &kt END     &kp LBKT
         &trans  &trans  &trans  &trans  &trans         &trans  &kp LEFT  &kp UP    &kp RIGHT   &trans
 &trans  &trans  &trans  &trans  &trans  &trans         &trans  &kp RBKT  &kp DOWN  &kp KP_DOT  &trans    &trans
                         &none   &trans  &trans         &trans  &trans    &trans
